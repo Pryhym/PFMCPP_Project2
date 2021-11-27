@@ -16,7 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
+ int
+ float
+ double
+ bool
+ char
+ unsigned int
  
  
  
@@ -60,9 +65,31 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
+    int score = 5;
+    int page = 2;
+    int count = 4;
 
+    float temperature = 3.2;
+    float time = 3.23;
+    float pressure = 5.34;
+
+    double air = 4.34343434;
+    double speed = 0.5454545450;
+    double length = 0.4343434343;
+
+    bool on = true;
+    bool off = false;
+    bool click = true;
+
+    char title = 'w';
+    char host = 'j';
+    char alpha = 'a';
+
+    unsigned int boxes = 20;
+    unsigned int dogs = 5;
+    unsigned int cats = 2;
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(score, page,count, temperature, time, pressure, air, speed, length, on, off, click, title, host, alpha, boxes, dogs,cats); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -77,43 +104,79 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 } 
 
 /*
- 1)
+ 1) float carCost(float downPayment, float carPrice, int numCars)
+ {
+     ignoreUnused(downPayment, carPrice, numCars = 1);
+     return{};
+ }
  */
 
 /*
- 2)
+ 2) str password(str password, str username,)
+ {
+     ignoreUnused(password, username);
+     return{};
+ }
  */
 
 /*
- 3)
+ 3) void moveArm(int direction, int distance)
+ {
+     ignoreUnused(direction, distance);
+ }
  */
 
 /*
- 4)
+ 4) void moveLeg(int distance, int direction)
+ {
+     ignoreUnused(distance, direction);
+ }
  */
 
 /*
- 5)
+ 5)  bool powerOn(bool switchOn, bool powerFlow)
+ {
+     ignoreUnused(switchOn, powerFlow);
+     return{};
+ }
  */
 
 /*
- 6)
+ 6) void car(int direction, int speed)
+ {
+     ignoreUnused(direction, speed = 55);
+ }
  */
 
 /*
- 7)
+ 7) float thermostat(float temp, float setTemp)
+ {
+     ignoreUnused(temp, setTemp);
+     return{};
+ }
  */
 
 /*
- 8)
+ 8) float time(str amPM, float location, float currentTime)
+ {
+     ignoreUnused(amPm, location = 0.00, currentTime);
+     return{};
+ }
  */
 
 /*
- 9)
+ 9) void elevator(bool up, bool down, int floor)
+ {
+     ignoreUnused(up, down, floor);
+ }
  */
 
 /*
- 10)
+ 10) bool launch(bool loaded, int time, float fuel)
+ {
+     ignoreUnused(load, time, fuel);
+     return{};
+ }
  */
 
 /*
@@ -135,25 +198,25 @@ int main()
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
     
-    //1)
+    //1) auto Car = carCost(5k, 20k);
     
-    //2)
+    //2) auto Pass = password(pass123, jonDoe);
     
-    //3)
+    //3) auto arm = moveArm(-150, 80);
     
-    //4)
+    //4) auto leg = moveLeg(48, 100);
     
-    //5)
+    //5) auto onOff = powerOn(true, true);
     
-    //6)
+    //6) auto drive = car(22);
     
-    //7)
+    //7) auto AC = thermostat(72.3, 71.0);
     
-    //8)
+    //8) auto clock = time(pm, 12.34, 12:00);
     
-    //9)
+    //9) auto lift = elevator(true, false, 8);
     
-    //10)
+    //10) bool takeOff = launch(true, 12, 8.9);
     
     
     ignoreUnused(carRented);
