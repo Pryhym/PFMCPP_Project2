@@ -89,7 +89,7 @@ void variableDeclarations()
     unsigned int dogs = 5;
     unsigned int cats = 2;
     
-    ignoreUnused(score, page,count, temperature, time, pressure, air, speed, length, on, off, click, title, host, alpha, boxes, dogs,cats); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, score, page,count, temperature, time, pressure, air, speed, length, on, off, click, title, host, alpha, boxes, dogs,cats); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -150,7 +150,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  }
  
 
- float timeZoneIndic(bool amPm, int currentTime,  float location = 0.00f)
+ float setTime(bool amPm, int currentTime,  float location = 0.00f)
  {
      ignoreUnused(amPm, currentTime, location);
      return {}; 
@@ -203,14 +203,14 @@ int main()
     
     auto AC = setThermostat(72.3f, 71.0f);
     
-    auto clock = timeZoneIndic(false, 1200);
+    auto setClock = setTime(false, 1200);
     
     moveElevator(true, false, 8);
     
     bool takeOff = launch(true, 12, 8.9f);
     
     
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, car, pass,onOff, AC, setClock, takeOff);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
