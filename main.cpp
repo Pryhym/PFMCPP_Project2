@@ -69,9 +69,9 @@ void variableDeclarations()
     int page = 2;
     int count = 4;
 
-    float temperature = 3.2;
-    float time = 3.23;
-    float pressure = 5.34;
+    float temperature = 3.2f;
+    float time = 3.23f;
+    float pressure = 5.34f;
 
     double air = 4.34343434;
     double speed = 0.5454545450;
@@ -103,81 +103,73 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
 
-/*
- 1) float carCost(float downPayment, float carPrice, int numCars)
+ float carCost(float downPayment, float carPrice, int numCars)
  {
      ignoreUnused(downPayment, carPrice, numCars = 1);
-     return{};
+     return {};
  }
- */
 
-/*
- 2) str password(str password, str username,)
+
+  char password(char password, char username)
  {
      ignoreUnused(password, username);
-     return{};
+     return {};
  }
- */
+ 
 
-/*
- 3) void moveArm(int direction, int distance)
+
+  void moveArm(int direction, int distance)
  {
      ignoreUnused(direction, distance);
  }
- */
+ 
 
-/*
- 4) void moveLeg(int distance, int direction)
+ void moveLeg(int distance, int direction)
  {
      ignoreUnused(distance, direction);
  }
- */
+ 
 
-/*
- 5)  bool powerOn(bool switchOn, bool powerFlow)
+  bool powerOn(bool switchOn, bool powerFlow)
  {
      ignoreUnused(switchOn, powerFlow);
-     return{};
+     return {};
  }
- */
+ 
 
-/*
- 6) void car(int direction, int speed)
+ void car(int direction, int speed)
  {
      ignoreUnused(direction, speed = 55);
  }
- */
+ 
 
-/*
- 7) float thermostat(float temp, float setTemp)
+ float thermostat(float temp, float setTemp)
  {
      ignoreUnused(temp, setTemp);
      return{};
  }
- */
+ 
 
-/*
- 8) float time(str amPM, float location, float currentTime)
+
+  float time(bool amPm, float location, int currentTime)
  {
      ignoreUnused(amPm, location = 0.00, currentTime);
      return{};
  }
- */
+ 
 
-/*
- 9) void elevator(bool up, bool down, int floor)
+ void elevator(bool up, bool down, int floor)
  {
      ignoreUnused(up, down, floor);
  }
- */
+ 
 
-/*
- 10) bool launch(bool loaded, int time, float fuel)
+ bool launch(bool loaded, int time, float fuel)
  {
-     ignoreUnused(load, time, fuel);
+     ignoreUnused(loaded, time, fuel);
      return{};
  }
- */
+ 
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -198,25 +190,25 @@ int main()
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
     
-    //1) auto Car = carCost(5k, 20k);
+    auto Car = carCost(5000.f, 20000.f, 1);
     
-    //2) auto Pass = password(pass123, jonDoe);
+    char Pass = password('j', 'm');
     
-    //3) auto arm = moveArm(-150, 80);
+    moveArm(-150, 80);
     
-    //4) auto leg = moveLeg(48, 100);
+    moveLeg(48, 100);
     
-    //5) auto onOff = powerOn(true, true);
+    auto onOff = powerOn(true, true);
     
-    //6) auto drive = car(22);
+    car(22, 55);
     
-    //7) auto AC = thermostat(72.3, 71.0);
+    auto AC = thermostat(72.3f, 71.0f);
     
-    //8) auto clock = time(pm, 12.34, 12:00);
+    auto clock = time(false, 12.34f, 1200);
     
-    //9) auto lift = elevator(true, false, 8);
+    elevator(true, false, 8);
     
-    //10) bool takeOff = launch(true, 12, 8.9);
+    bool takeOff = launch(true, 12, 8.9f);
     
     
     ignoreUnused(carRented);
