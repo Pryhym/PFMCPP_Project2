@@ -146,7 +146,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  float thermostat(float temp, float setTemp)
  {
      ignoreUnused(temp, setTemp);
-     return{};
+     return {};
  }
  
 
@@ -154,7 +154,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
   float time(bool amPm, float location, int currentTime)
  {
      ignoreUnused(amPm, location = 0.00, currentTime);
-     return{};
+     return {};
  }
  
 
@@ -167,7 +167,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  bool launch(bool loaded, int time, float fuel)
  {
      ignoreUnused(loaded, time, fuel);
-     return{};
+     return {};
  }
  
 
