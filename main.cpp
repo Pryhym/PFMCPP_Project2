@@ -110,7 +110,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  }
 
 
-  char password(char password, char username)
+ char passwordInput(char password, char username)
  {
      ignoreUnused(password, username);
      return {};
@@ -118,7 +118,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  
 
 
-  void moveArm(int direction, int distance)
+ void moveArm(int direction, int distance)
  {
      ignoreUnused(direction, distance);
  }
@@ -130,35 +130,34 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  }
  
 
-  bool powerOn(bool switchOn, bool powerFlow)
+ bool powerToggle(bool switchOn, bool powerFlow)
  {
      ignoreUnused(switchOn, powerFlow);
      return {};
  }
  
 
- void car(int direction, int speed)
+ void driveCar(int direction, int speed= 55)
  {
-     ignoreUnused(direction, speed = 55);
+     ignoreUnused(direction, speed);
  }
  
 
- float thermostat(float temp, float setTemp)
+ float setThermostat(float temp, float setTemp)
  {
      ignoreUnused(temp, setTemp);
      return {};
  }
  
 
-
-  float time(bool amPm, float location, int currentTime)
+ float timeZoneIndic(bool amPm, int currentTime,  float location = 0.00f)
  {
-     ignoreUnused(amPm, location = 0.00, currentTime);
-     return {};
+     ignoreUnused(amPm, currentTime, location);
+     return {}; 
  }
  
 
- void elevator(bool up, bool down, int floor)
+ void moveElevator(bool up, bool down, int floor)
  {
      ignoreUnused(up, down, floor);
  }
@@ -190,23 +189,23 @@ int main()
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
     
-    auto Car = carCost(5000.f, 20000.f, 1);
+    auto car = carCost(5000.f, 20000.f, 1);
     
-    char Pass = password('j', 'm');
+    char pass = passwordInput('j', 'm');
     
     moveArm(-150, 80);
     
     moveLeg(48, 100);
     
-    auto onOff = powerOn(true, true);
+    auto onOff = powerToggle(true, true);
     
-    car(22, 55);
+    driveCar(22, 55);
     
-    auto AC = thermostat(72.3f, 71.0f);
+    auto AC = setThermostat(72.3f, 71.0f);
     
-    auto clock = time(false, 12.34f, 1200);
+    auto clock = timeZoneIndic(false, 1200);
     
-    elevator(true, false, 8);
+    moveElevator(true, false, 8);
     
     bool takeOff = launch(true, 12, 8.9f);
     
